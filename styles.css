@@ -1,71 +1,67 @@
-/* General Body and Font Styles - REVISED FOR DARK THEME */
+/* General Body and Font Styles - MODERNIZED FOR DARK THEME */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #121212; /* Darker, more common dark theme background */
-  color: #E0E0E0; /* Lighter text color for dark theme */
+  background-color: #1a1a2e; /* Darker background for the entire page */
+  color: #e0e0e0; /* Light text color for dark theme */
   line-height: 1.6;
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem; /* Use rem for padding */
+  padding: 15px;
 }
 
-/* Header Styles - REVISED FOR DARK THEME */
+/* Header Styles - MODERNIZED FOR DARK THEME */
 .header {
-  background-color: #1F1F1F; /* Slightly lighter dark for header */
-  padding: 1rem 1.25rem; /* Use rem */
-  border-bottom: 1px solid #333333; /* Darker border */
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4); /* Stronger shadow */
-  margin-bottom: 1.25rem; /* Space below header */
-  border-radius: 0.5rem; /* Rounded corners for header */
+  background-color: #16213e; /* Darker background for header */
+  padding: 15px 20px;
+  border-bottom: 1px solid #2e3b55; /* Darker border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
 .header-top {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Mengatur item dari awal kontainer (kiri) */
   align-items: center;
-  margin-bottom: 1rem;
-  gap: 1.25rem; /* Space between logo and search bar */
+  margin-bottom: 15px;
+  gap: 20px; /* Menambahkan jarak antara logo dan search bar */
 }
 
 .search-form {
   display: flex;
   flex-grow: 1;
-  max-width: 35rem; /* Max width for search bar */
+  max-width: 500px;
 }
 
 .search-input {
-  border: 1px solid #444444; /* Darker border for input */
-  background-color: #2C2C2C; /* Darker background for input */
-  color: #E0E0E0; /* Light text for input */
-  padding: 0.625rem 1rem; /* Use rem */
-  border-radius: 1.5625rem; /* More rounded */
+  border: 1px solid #4a577a; /* Darker border for input */
+  background-color: #2e3b55; /* Darker background for input */
+  color: #e0e0e0; /* Light text for input */
+  padding: 10px 15px;
+  border-radius: 25px;
   flex-grow: 1;
-  font-size: 0.9375rem; /* Use rem */
+  font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s;
 }
 
 .search-input::placeholder {
-  color: #888888; /* Lighter placeholder text */
+  color: #a0a0a0; /* Lighter placeholder text */
 }
 
 .search-input:focus {
-  border-color: #007BFF; /* Highlight on focus */
-  box-shadow: 0 0 0 0.125rem rgba(0, 123, 255, 0.25); /* Subtle glowing effect */
+  border-color: #5d8aa8; /* Highlight on focus */
 }
 
 .search-button {
-  background-color: #007BFF; /* Primary blue button */
+  background-color: #5d8aa8; /* Muted blue button */
   color: white;
   border: none;
-  border-radius: 1.5625rem; /* More rounded */
-  padding: 0.625rem 0.9375rem; /* Use rem */
-  margin-left: -2.5rem; /* Overlap input for icon placement */
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin-left: -40px; /* Overlap input for icon placement */
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -74,7 +70,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: #0056B3; /* Darker blue on hover */
+  background-color: #4a748c; /* Darker blue on hover */
 }
 
 .search-button .fas {
@@ -90,11 +86,17 @@ body {
   object-fit: cover;
 }
 
-/* Floating animation for logo */
+/* Animasi floating untuk logo */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-0.3125rem); } /* Use rem */
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .logo.floating {
@@ -102,10 +104,10 @@ body {
 }
 
 .main-nav {
-  background-color: #2C2C2C; /* Darker background for nav */
-  border-radius: 0.5rem; /* Use rem */
-  padding: 0.625rem 0; /* Use rem */
-  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  background-color: #2e3b55; /* Darker background for nav */
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
@@ -118,27 +120,27 @@ body {
 
 .nav-item {
   text-decoration: none;
-  color: #CCCCCC; /* Lighter grey for nav items */
+  color: #c0c0c0; /* Light text for nav items */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.3125rem 0.625rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 5px 10px;
+  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-  background-color: #3A3A3A; /* Darker background on hover */
-  color: #007BFF; /* Primary blue on hover */
+  background-color: #3e4e6b; /* Darker background on hover */
+  color: #8ab4f8; /* Lighter blue on hover */
 }
 
 .nav-item.active {
-  color: #007BFF; /* Highlight active item */
+  color: #8ab4f8; /* Highlight active item */
 }
 
 .nav-icon {
   font-size: 1.3rem;
-  margin-bottom: 0.3125rem; /* Use rem */
+  margin-bottom: 5px;
 }
 
 .nav-text {
@@ -146,93 +148,75 @@ body {
   font-weight: 500;
 }
 
-/* Featured Carousel - REVISED FOR DARK THEME */
+/* Featured Carousel - MODERNIZED FOR DARK THEME */
 .featured-carousel {
   display: flex;
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap to slides */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  padding: 0.9375rem 0; /* Use rem */
-  gap: 0.9375rem; /* Space between slides */
-  margin-bottom: 1.25rem;
-  /* Scrollbar styling for modern browsers */
-  scrollbar-width: thin;
-  scrollbar-color: #555 #333;
-}
-
-.featured-carousel::-webkit-scrollbar {
-  height: 0.5rem;
-}
-
-.featured-carousel::-webkit-scrollbar-track {
-  background: #2C2C2C;
-  border-radius: 0.25rem;
-}
-
-.featured-carousel::-webkit-scrollbar-thumb {
-  background-color: #555555;
-  border-radius: 0.25rem;
-  border: 1px solid #2C2C2C;
+  padding: 15px 0;
+  gap: 15px; /* Space between slides */
+  margin-bottom: 20px;
 }
 
 .carousel-slide {
   flex: 0 0 90%; /* Take 90% of container width, adjust as needed */
-  max-width: 18.75rem; /* Max width for a single slide */
-  background-color: #1F1F1F; /* Darker background for slides */
-  border-radius: 0.75rem; /* Use rem */
-  padding: 1.25rem; /* Use rem */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  max-width: 300px; /* Max width for a single slide */
+  background-color: #16213e; /* Darker background for slides */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   position: relative;
   scroll-snap-align: start;
-  min-width: 17.5rem; /* Ensure slides don't get too small */
-  border: 1px solid #333333; /* Subtle border */
+  min-width: 280px; /* Ensure slides don't get too small */
+  border: 1px solid #2e3b55; /* Subtle border */
 }
 
 .promo-badge {
   position: absolute;
-  top: 0.9375rem; /* Use rem */
-  left: 0.9375rem; /* Use rem */
-  background-color: #FF5722; /* Vibrant orange-red for hot */
+  top: 15px;
+  left: 15px;
+  background-color: #e65100; /* Darker orange-red for hot */
   color: white;
-  padding: 0.3125rem 0.625rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 5px 10px;
+  border-radius: 5px;
   font-size: 0.75rem;
   font-weight: 700;
 }
 
 .carousel-slide:nth-child(even) .promo-badge {
-  background-color: #4CAF50; /* Vibrant green for new */
+  background-color: #388e3c; /* Darker green for new */
 }
 
 .promo-text {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 1.5625rem; /* Space for badge, use rem */
-  color: #E0E0E0; /* Light text */
+  margin-top: 25px; /* Space for badge */
+  color: #e0e0e0; /* Light text */
 }
 
 .promo-subtext {
   font-size: 0.9rem;
-  color: #CCCCCC; /* Muted light text */
-  margin-top: 0.3125rem; /* Use rem */
+  color: #c0c0c0; /* Muted light text */
+  margin-top: 5px;
 }
 
-/* Quick Actions - REVISED FOR DARK THEME */
+/* Quick Actions - MODERNIZED FOR DARK THEME */
 .quick-actions {
   display: flex;
   justify-content: space-around;
-  padding: 0.9375rem 0; /* Use rem */
-  background-color: #1F1F1F; /* Darker background */
-  border-radius: 0.75rem; /* Use rem */
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-  margin-bottom: 1.25rem;
-  border: 1px solid #333333; /* Subtle border */
+  padding: 15px 0;
+  background-color: #16213e; /* Darker background */
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: 1px solid #2e3b55; /* Subtle border */
 }
 
 .action-item {
   text-align: center;
   flex: 1;
-  padding: 0.625rem; /* Use rem */
+  padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
   text-decoration: none; /* Ensure links don't have underline */
@@ -240,131 +224,114 @@ body {
 }
 
 .action-item:hover {
-  background-color: #2C2C2C; /* Darker background on hover */
-  border-radius: 0.5rem; /* Use rem */
+  background-color: #2e3b55; /* Darker background on hover */
+  border-radius: 8px;
 }
 
 .action-icon {
   font-size: 1.8rem;
-  color: #007BFF; /* Primary blue for icons */
-  margin-bottom: 0.5rem; /* Use rem */
+  color: #8ab4f8; /* Lighter blue for icons */
+  margin-bottom: 8px;
 }
 
 .action-text {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #E0E0E0; /* Light text */
+  color: #e0e0e0; /* Light text */
 }
 
-/* Game Categories - REVISED FOR DARK THEME */
+/* Game Categories - MODERNIZED FOR DARK THEME (using existing classes) */
 .game-categories {
-  margin-bottom: 1.5625rem; /* Use rem */
-  background-color: #1F1F1F; /* Darker background */
-  padding: 1.25rem; /* Use rem */
-  border-radius: 0.75rem; /* Use rem */
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-  border: 1px solid #333333; /* Added border */
+  margin-bottom: 25px;
+  background-color: #16213e; /* Darker background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2e3b55; /* Added border */
 }
 
 .category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.25rem; /* Increased margin */
+  margin-bottom: 20px; /* Increased margin */
 }
 
 .category-title {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Larger title */
   font-weight: 600;
-  color: #E0E0E0; /* Light text */
+  color: #e0e0e0; /* Light text */
   margin: 0;
 }
 
 .view-all {
   text-decoration: none;
-  color: #007BFF; /* Primary blue for links */
+  color: #5d8aa8; /* Muted blue for links */
   font-weight: 500;
-  font-size: 1rem;
-  display: flex;
+  font-size: 1rem; /* Slightly larger */
+  display: flex; /* Added flex for icon alignment */
   align-items: center;
-  gap: 0.3125rem; /* Use rem */
+  gap: 5px; /* Space between text and icon */
   transition: color 0.3s;
 }
 
 .view-all:hover {
-  color: #0056B3; /* Darker blue on hover */
+  color: #8ab4f8; /* Lighter blue on hover */
 }
 
 .view-all .fas {
   font-size: 0.9rem;
-  margin-left: 0;
+  margin-left: 0; /* Removed margin as gap handles it */
 }
 
 .game-list {
   display: flex; /* Changed from grid to flex */
   overflow-x: auto; /* Enable horizontal scrolling */
-  gap: 0.9375rem; /* Use rem for gap */
-  padding-bottom: 0.9375rem; /* Space for potential scrollbar */
+  gap: 15px;
+  padding-bottom: 15px; /* Space for potential scrollbar */
   -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-  /* Scrollbar styling for modern browsers */
-  scrollbar-width: thin;
-  scrollbar-color: #555 #333;
+  /* Remove grid-template-columns and related grid properties */
 }
-
-.game-list::-webkit-scrollbar {
-  height: 0.5rem;
-}
-
-.game-list::-webkit-scrollbar-track {
-  background: #2C2C2C;
-  border-radius: 0.25rem;
-}
-
-.game-list::-webkit-scrollbar-thumb {
-  background-color: #555555;
-  border-radius: 0.25rem;
-  border: 1px solid #2C2C2C;
-}
-
 
 .game-item {
   text-align: center;
   text-decoration: none;
-  color: #E0E0E0; /* Light text */
-  display: flex;
-  flex-direction: column;
+  color: #e0e0e0; /* Light text */
+  display: flex; /* Added flex */
+  flex-direction: column; /* Stack children vertically */
   align-items: center;
-  gap: 0.5rem; /* Use rem for gap */
-  padding: 0.9375rem; /* Use rem for padding */
-  border-radius: 0.625rem; /* Use rem */
-  background-color: #2C2C2C; /* Slightly lighter card background */
-  border: 1px solid #3A3A3A; /* Subtle border */
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+  gap: 8px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #2e3b55; /* Slightly lighter card background */
+  border: 1px solid #3e4e6b; /* Subtle border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-  min-width: 7.5rem; /* Minimum width for each item (120px) */
+  min-width: 120px; /* Minimum width for each item */
   flex-shrink: 0; /* Prevent items from shrinking below min-width */
 }
 
 .game-item:hover {
-  transform: translateY(-0.1875rem); /* Use rem */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .game-icon { /* This applies to the div wrapping the img */
-  width: 5rem; /* Use rem (80px) */
-  height: 5rem; /* Use rem (80px) */
-  border-radius: 0.9375rem; /* Use rem */
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #121212; /* Dark background for icons */
+  background-color: #16213e; /* Dark background for icons */
 }
 
 .game-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Removed old border and box-shadow */
 }
 
 .game-name {
@@ -377,53 +344,52 @@ body {
 }
 
 
-/* Pulsa & Paket Data Section - REVISED FOR DARK THEME */
+/* Pulsa & Paket Data Section - MODERNIZED FOR DARK THEME */
 .pulsa-section {
-  margin-bottom: 1.5625rem; /* Use rem */
-  background-color: #1F1F1F; /* Darker background */
-  padding: 1.25rem; /* Use rem */
-  border-radius: 0.75rem; /* Use rem */
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-  border: 1px solid #333333; /* Subtle border */
+  margin-bottom: 25px;
+  background-color: #16213e; /* Darker background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2e3b55; /* Subtle border */
 }
 
 .phone-input-container {
-  margin-bottom: 1.25rem; /* Use rem */
+  margin-bottom: 20px;
 }
 
 .input-group {
   display: flex;
-  margin-bottom: 0.9375rem; /* Use rem */
+  margin-bottom: 15px;
 }
 
 .phone-input {
   flex-grow: 1;
-  padding: 0.75rem 0.9375rem; /* Use rem */
-  border: 1px solid #444444; /* Darker border */
-  background-color: #2C2C2C; /* Darker background */
-  color: #E0E0E0; /* Light text */
-  border-radius: 0.5rem; /* Use rem */
+  padding: 12px 15px;
+  border: 1px solid #4a577a; /* Darker border */
+  background-color: #2e3b55; /* Darker background */
+  color: #e0e0e0; /* Light text */
+  border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s;
 }
 
 .phone-input::placeholder {
-  color: #888888;
+  color: #a0a0a0;
 }
 
 .phone-input:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 0 0.125rem rgba(0, 123, 255, 0.25);
+  border-color: #8ab4f8;
 }
 
 .check-button {
-  background-color: #007BFF; /* Primary blue */
+  background-color: #5d8aa8; /* Muted blue */
   color: white;
   border: none;
-  padding: 0.75rem 1.25rem; /* Use rem */
-  border-radius: 0.5rem; /* Use rem */
-  margin-left: 0.625rem; /* Use rem */
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-left: 10px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
@@ -431,17 +397,17 @@ body {
 }
 
 .check-button:hover {
-  background-color: #0056B3;
+  background-color: #4a748c;
 }
 
 .operator-logos {
   display: flex;
   justify-content: space-around;
-  gap: 0.625rem; /* Use rem */
+  gap: 10px;
 }
 
 .operator-logos img {
-  height: 2.1875rem; /* Use rem */
+  height: 35px;
   object-fit: contain;
   filter: grayscale(60%) brightness(1.2); /* Adjusted for dark theme */
   transition: filter 0.3s;
@@ -453,17 +419,17 @@ body {
 
 .package-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr)); /* Use rem (150px) */
-  gap: 0.9375rem; /* Use rem */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
 }
 
 .package-card {
-  background-color: #2C2C2C; /* Darker card background */
-  border: 1px solid #3A3A3A; /* Darker border */
-  border-radius: 0.625rem; /* Use rem */
-  padding: 0.9375rem; /* Use rem */
+  background-color: #2e3b55; /* Darker card background */
+  border: 1px solid #3e4e6b; /* Darker border */
+  border-radius: 10px;
+  padding: 15px;
   text-align: center;
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
@@ -471,59 +437,67 @@ body {
 }
 
 .package-card:hover {
-  transform: translateY(-0.3125rem); /* Use rem */
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .package-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.625rem; /* Use rem */
+  margin-bottom: 10px;
 }
 
 .operator-label {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.25rem 0.5rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 4px 8px;
+  border-radius: 5px;
   color: white;
 }
 
-.operator-label.telkomsel { background-color: #D32F2F; } /* Darker red */
-.operator-label.xl { background-color: #1976D2; } /* Darker blue */
-.operator-label.indosat { background-color: #FBC02D; } /* Darker yellow/orange */
-.operator-label.smartfren { background-color: #FFA000; } /* Darker orange */
+.operator-label.telkomsel {
+  background-color: #c62828; /* Darker red */
+}
+.operator-label.xl {
+  background-color: #1a237e; /* Darker blue */
+}
+.operator-label.indosat {
+  background-color: #d32f2f; /* Darker red */
+}
+.operator-label.smartfren {
+  background-color: #ef6c00; /* Darker orange */
+}
 
 .best-seller {
-  background-color: #4CAF50; /* Green */
-  color: white; /* Changed to white for better contrast */
+  background-color: #fbc02d; /* Darker yellow */
+  color: #333;
   font-size: 0.7rem;
   font-weight: 700;
-  padding: 0.1875rem 0.4375rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 3px 7px;
+  border-radius: 5px;
 }
 
 .package-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #007BFF; /* Primary blue */
+  color: #8ab4f8; /* Lighter blue */
   margin: 0;
 }
 
 .package-duration {
   font-size: 0.85rem;
-  color: #CCCCCC; /* Lighter grey */
-  margin-top: 0.3125rem; /* Use rem */
+  color: #c0c0c0; /* Lighter grey */
+  margin-top: 5px;
 }
 
 .package-price {
-  margin-top: 0.625rem; /* Use rem */
+  margin-top: 10px;
 }
 
 .original-price {
   font-size: 0.8rem;
-  color: #888888; /* Muted light grey */
+  color: #a0a0a0; /* Muted light grey */
   text-decoration: line-through;
   display: block;
 }
@@ -531,42 +505,42 @@ body {
 .discounted-price {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #FF5722; /* Vibrant orange-red for discount */
+  color: #ef5350; /* Softer red for discount */
 }
 
-/* Voucher Section - REVISED FOR DARK THEME */
+/* Voucher Section - MODERNIZED FOR DARK THEME */
 .voucher-section {
-  margin-bottom: 1.5625rem; /* Use rem */
-  background-color: #1F1F1F; /* Darker background */
-  padding: 1.25rem; /* Use rem */
-  border-radius: 0.75rem; /* Use rem */
-  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-  border: 1px solid #333333; /* Subtle border */
+  margin-bottom: 25px;
+  background-color: #16213e; /* Darker background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2e3b55; /* Subtle border */
 }
 
 .voucher-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); /* Use rem (200px) */
-  gap: 1.25rem; /* Use rem */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .voucher-card {
-  border: 1px solid #3A3A3A; /* Darker border */
-  border-radius: 0.625rem; /* Use rem */
+  border: 1px solid #3e4e6b; /* Darker border */
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
-  background-color: #2C2C2C; /* Darker background for card */
+  background-color: #2e3b55; /* Darker background for card */
 }
 
 .voucher-card:hover {
-  transform: translateY(-0.3125rem); /* Use rem */
-  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .voucher-header {
   position: relative;
-  height: 7.5rem; /* Fixed height for image container (120px) */
+  height: 120px;
   overflow: hidden;
 }
 
@@ -578,53 +552,53 @@ body {
 
 .voucher-badge {
   position: absolute;
-  top: 0.625rem; /* Use rem */
-  right: 0.625rem; /* Use rem */
-  background-color: #4CAF50; /* Green */
+  top: 10px;
+  right: 10px;
+  background-color: #388e3c; /* Darker green */
   color: white;
-  padding: 0.3125rem 0.625rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 5px 10px;
+  border-radius: 5px;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .voucher-body {
-  padding: 0.9375rem; /* Use rem */
+  padding: 15px;
 }
 
 .voucher-title {
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 0.5rem; /* Use rem */
-  color: #E0E0E0; /* Light text */
+  margin-bottom: 8px;
+  color: #e0e0e0; /* Light text */
 }
 
 .voucher-validity {
   font-size: 0.8rem;
-  color: #888888; /* Muted light grey */
-  margin-bottom: 0.625rem; /* Use rem */
+  color: #a0a0a0; /* Muted light grey */
+  margin-bottom: 10px;
 }
 
 .voucher-price {
-  margin-bottom: 0.9375rem; /* Use rem */
+  margin-bottom: 15px;
 }
 
 .voucher-price .original-price {
   font-size: 0.9rem;
-  color: #888888;
+  color: #a0a0a0;
 }
 .voucher-price .discounted-price {
   font-size: 1.3rem;
-  color: #FF5722;
+  color: #ef5350;
 }
 
 .buy-button {
-  background-color: #007BFF; /* Primary blue */
+  background-color: #5d8aa8; /* Muted blue */
   color: white;
   border: none;
-  padding: 0.625rem 0.9375rem; /* Use rem */
-  border-radius: 0.3125rem; /* Use rem */
+  padding: 10px 15px;
+  border-radius: 5px;
   width: 100%;
   cursor: pointer;
   font-size: 1rem;
@@ -633,15 +607,15 @@ body {
 }
 
 .buy-button:hover {
-  background-color: #0056B3;
+  background-color: #4a748c;
 }
 
-/* Responsive adjustments - REVISED FOR DARK THEME */
+/* Responsive adjustments - MODERNIZED FOR DARK THEME */
 @media (max-width: 768px) {
   .header-top {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 15px;
   }
 
   .search-form {
@@ -651,7 +625,7 @@ body {
   }
 
   .logo {
-    margin-bottom: 0.625rem; /* Use rem */
+    margin-bottom: 10px;
   }
 
   .nav-list {
@@ -661,12 +635,12 @@ body {
 
   .nav-item {
     flex: 1 1 auto;
-    min-width: 5rem; /* Use rem (80px) */
-    padding: 0.625rem 0.3125rem; /* Use rem */
+    min-width: 80px;
+    padding: 10px 5px;
   }
 
   .featured-carousel {
-    padding: 0.625rem 0; /* Use rem */
+    padding: 10px 0;
   }
 
   .carousel-slide {
@@ -679,24 +653,33 @@ body {
 
   .action-item {
     flex: 1 1 30%;
-    margin: 0.3125rem; /* Use rem */
+    margin: 5px;
   }
 
   /* Specific adjustments for game-list to ensure horizontal scroll on mobile */
   .game-list {
-    gap: 0.625rem; /* Use rem */
+    grid-template-columns: unset; /* Remove grid columns */
+    display: flex; /* Ensure flexbox for horizontal scroll */
+    overflow-x: auto; /* Re-enable scroll */
+    padding-bottom: 15px; /* Maintain padding */
+    -webkit-overflow-scrolling: touch;
+    gap: 10px; /* Adjust gap for smaller screens */
   }
 
   .game-item {
-    min-width: 6.25rem; /* Use rem (100px) */
-    padding: 0.625rem; /* Use rem */
-    gap: 0.3125rem; /* Use rem */
+    min-width: 90px; /* Adjusted min-width for mobile game items */
+    padding: 10px;
+    gap: 5px;
   }
 
   .game-icon {
-    width: 3.75rem; /* Use rem (60px) */
-    height: 3.75rem; /* Use rem (60px) */
-    border-radius: 0.75rem; /* Use rem */
+    width: 60px; /* Adjusted icon size */
+    height: 60px;
+    border-radius: 12px;
+  }
+  .game-icon img { /* Ensure image fills its container */
+    width: 100%;
+    height: 100%;
   }
 
   .game-name {
@@ -705,30 +688,30 @@ body {
 
   .package-grid,
   .voucher-grid {
-    grid-template-columns: repeat(auto-fill, minmax(8.75rem, 1fr)); /* Use rem (140px) */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Adjust grid for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .main-content {
-    padding: 0.625rem; /* Use rem */
+    padding: 10px;
   }
 
   .header {
-    padding: 0.625rem; /* Use rem */
+    padding: 10px;
   }
 
   .search-input {
-    padding: 0.5rem 0.75rem; /* Use rem */
+    padding: 8px 12px;
   }
 
   .search-button {
-    padding: 0.5rem 0.75rem; /* Use rem */
+    padding: 8px 12px;
   }
 
   .nav-item {
     font-size: 0.75rem;
-    padding: 0.5rem 0.1875rem; /* Use rem */
+    padding: 8px 3px;
     min-width: unset;
   }
 
@@ -762,15 +745,15 @@ body {
 
   /* Specific adjustments for game-list on very small mobile */
   .game-list {
-    gap: 0.5rem; /* Use rem */
+    gap: 8px; /* Slightly smaller gap */
   }
   .game-item {
-    min-width: 5rem; /* Use rem (80px) */
-    padding: 0.5rem; /* Use rem */
+    min-width: 75px; /* Even smaller min-width for very small screens */
+    padding: 8px;
   }
   .game-icon {
-    width: 3.125rem; /* Use rem (50px) */
-    height: 3.125rem; /* Use rem (50px) */
+    width: 50px; /* Adjusted icon size */
+    height: 50px;
   }
   .game-name {
     font-size: 0.7rem;
@@ -778,11 +761,11 @@ body {
 
   .package-grid,
   .voucher-grid {
-    grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr)); /* Use rem (100px) */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Further adjust grid */
   }
 
   .package-card {
-    padding: 0.625rem; /* Use rem */
+    padding: 10px;
   }
 
   .package-amount {
