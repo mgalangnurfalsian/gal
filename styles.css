@@ -604,3 +604,101 @@ body {
   font-size: 18px;
   font-weight: 700;
 }
+
+/* Voucher Section */
+.voucher-section {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.voucher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.voucher-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.voucher-card:hover {
+  transform: translateY(-5px);
+}
+
+.voucher-header {
+  position: relative;
+  height: 150px;
+}
+
+.voucher-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voucher-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff4757;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.voucher-body {
+  padding: 1.2rem;
+}
+
+.voucher-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.voucher-validity {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.voucher-price {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 1.2rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.discounted-price {
+  color: #2d3436;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #0056b3;
+}
