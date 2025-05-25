@@ -105,3 +105,50 @@ document.querySelector('.header-top').appendChild(menuButton);
 menuButton.addEventListener('click', () => {
   document.querySelector('.nav-list').classList.toggle('active');
 });
+
+// Phone Number Formatting
+document.querySelector('.phone-input').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length > 3) value = value.replace(/(\d{3})(\d{3})?(\d{4})?/, '$1-$2-$3');
+  e.target.value = value.substring(0, 14);
+});
+
+// Package Selection
+document.querySelectorAll('.package-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const operator = card.querySelector('.operator-label').textContent;
+    const amount = card.querySelector('.package-amount').textContent;
+    const price = card.querySelector('.discounted-price').textContent;
+    
+    const selectedPackage = {
+      operator,
+      amount,
+      price
+    };
+    
+    showPackageDetail(selectedPackage);
+  });
+});
+
+function showPackageDetail(pkg) {
+  const detail = `
+    Operator: ${pkg.operator}
+    Paket: ${pkg.amount}
+    Harga: ${pkg.price}
+  `;
+  
+  const confirmation = confirm(`${detail}\n\nLanjutkan pembelian?`);
+  if (confirmation) {
+    window.location.href = '#';
+  }
+}
+
+// Check Button Handler
+document.querySelector('.check-button').addEventListener('click', () => {
+  const phoneNumber = document.querySelector('.phone-input').value;
+  if (phoneNumber.length < 10) {
+    showNotification('Nomor handphone tidak valid!');
+    return;
+  }
+  showNotification(`Memeriksa nomor ${phoneNumber}...`);
+});
