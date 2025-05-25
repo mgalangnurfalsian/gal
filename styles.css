@@ -460,3 +460,147 @@ body {
     transform: translate(-50%, 0);
   }
 }
+
+/* Pulsa & Paket Section */
+.pulsa-section {
+  margin-bottom: 40px;
+}
+
+.phone-input-container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--dark);
+  color: white;
+  font-size: 14px;
+}
+
+.check-button {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.operator-logos {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.operator-logos img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(0.8);
+  transition: all 0.3s ease;
+}
+
+.operator-logos img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.package-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.package-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.operator-label {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.telkomsel { background: #e2001a; color: white; }
+.xl { background: #ff6b00; color: white; }
+.indosat { background: #ff0000; color: white; }
+.smartfren { background: #f7b500; color: black; }
+
+.best-seller {
+  background: var(--success);
+  color: white;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+.package-body {
+  text-align: center;
+}
+
+.package-amount {
+  color: var(--primary);
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.package-duration {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.package-price {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 12px;
+}
+
+.discounted-price {
+  color: var(--success);
+  font-size: 18px;
+  font-weight: 700;
+}
