@@ -23,15 +23,18 @@ body {
 
 .header-top {
   display: flex;
-  justify-content: space-between;
+  /* Mengubah dari space-between menjadi flex-start atau center */
+  justify-content: flex-start; /* Mengatur item dari awal kontainer (kiri) */
   align-items: center;
   margin-bottom: 15px;
+  gap: 20px; /* Menambahkan jarak antara logo dan search bar */
 }
 
 .search-form {
   display: flex;
   flex-grow: 1;
-  margin-right: 20px;
+  /* Menghapus margin-right yang sebelumnya */
+  margin-right: 0;
   max-width: 500px;
 }
 
@@ -71,9 +74,30 @@ body {
   font-size: 1rem;
 }
 
+.logo {
+  flex-shrink: 0; /* Pastikan logo tidak mengecil */
+}
+
 .logo img {
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* Animasi floating untuk logo */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo.floating {
+  animation: float 2s ease-in-out infinite;
 }
 
 .main-nav {
@@ -535,18 +559,18 @@ body {
 @media (max-width: 768px) {
   .header-top {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Pusat logo dan search form di mobile */
+    gap: 15px; /* Menyesuaikan jarak di mobile */
   }
 
   .search-form {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0; /* Hapus margin-bottom di mobile jika tidak diperlukan */
   }
 
   .logo {
-    align-self: center; /* Center logo on smaller screens */
-    margin-top: 10px;
+    margin-bottom: 10px; /* Beri sedikit jarak di bawah logo di mobile */
   }
 
   .nav-list {
