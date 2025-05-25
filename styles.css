@@ -642,7 +642,7 @@ body {
   top: 0.5rem;  /* Posisi disesuaikan */
   right: 0.5rem;
   background: #ff4757;
-  color: white;
+  color: var(--card-bg);
   padding: 0.2rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
