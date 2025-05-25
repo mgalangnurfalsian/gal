@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lapak BSI - Pulsa & Paket Data</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-content">
+      <header class="header">
+        <div class="header-top">
+          <div class="logo floating">
+            <img
+              src="WhatsApp Image 2025-05-14 at 20.27.34 (1).jpeg"
+              width="50"
+              height="50"
+              alt="Lapak BSI Logo"
+            />
+          </div>
+          <form class="search-form" role="search">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Cari pulsa atau paket data..."
+            />
+            <button type="submit" class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-home"></i></div>
+                <span class="nav-text">Beranda</span>
+              </a>
+            </li>
+            <li>
+              <a href="pulsa-data.html" class="nav-item active">
+                <div class="nav-icon"><i class="fas fa-mobile-alt"></i></div>
+                <span class="nav-text">Pulsa & Data</span>
+              </a>
+            </li>
+            <li>
+              <a href="voucher-game.html" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-ticket-alt"></i></div>
+                <span class="nav-text">Voucher Game</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-shopping-cart"></i></div>
+                <span class="nav-text">Keranjang</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-receipt"></i></div>
+                <span class="nav-text">Transaksi</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-user"></i></div>
+                <span class="nav-text">Akun</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-item">
+                <div class="nav-icon"><i class="fas fa-cog"></i></div>
+                <span class="nav-text">Pengaturan</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="pulsa-section">
+        <div class="category-header">
+          <h2 class="category-title">Pulsa & Paket Data</h2>
+        </div>
+
+        <div class="phone-input-container">
+          <div class="input-group">
+            <input
+              type="tel"
+              class="phone-input"
+              placeholder="Masukkan nomor handphone"
+              maxlength="14"
+            />
+            <button class="check-button">Cek</button>
+          </div>
+          <div class="operator-logos">
+            <img src="telkomsel.png" alt="Telkomsel" />
+            <img src="xl.png" alt="XL" />
+            <img src="indosat.png" alt="Indosat" />
+            <img src="smartfren.png" alt="Smartfren" />
+          </div>
+        </div>
+
+        <div class="package-grid">
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label telkomsel">Telkomsel</span>
+              <span class="best-seller">Terlaris</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">5 GB</h3>
+              <p class="package-duration">30 Hari</p>
+              <div class="package-price">
+                <span class="original-price">Rp 50.000</span>
+                <span class="discounted-price">Rp 45.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label xl">XL</span>
+              <span class="best-seller">Terlaris</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">10 GB</h3>
+              <p class="package-duration">30 Hari</p>
+              <div class="package-price">
+                <span class="original-price">Rp 90.000</span>
+                <span class="discounted-price">Rp 85.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label indosat">Indosat</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">3 GB</h3>
+              <p class="package-duration">7 Hari</p>
+              <div class="package-price">
+                <span class="discounted-price">Rp 20.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label smartfren">Smartfren</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">Unlimited</h3>
+              <p class="package-duration">30 Hari</p>
+              <div class="package-price">
+                <span class="original-price">Rp 100.000</span>
+                <span class="discounted-price">Rp 95.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label telkomsel">Telkomsel</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">Pulsa 25.000</h3>
+              <p class="package-duration">Reguler</p>
+              <div class="package-price">
+                <span class="discounted-price">Rp 26.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-card">
+            <div class="package-header">
+              <span class="operator-label xl">XL</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-amount">Pulsa 50.000</h3>
+              <p class="package-duration">Reguler</p>
+              <div class="package-price">
+                <span class="discounted-price">Rp 51.500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
