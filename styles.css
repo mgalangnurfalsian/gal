@@ -388,3 +388,75 @@ body {
 }
 
 .game
+
+/* Notification Styling */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Cart Counter */
+.nav-icon[data-count]::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--danger);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Menu */
+.menu-button {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+  
+  .nav-list {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: var(--card-bg);
+    width: 100%;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-list.active {
+    left: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
