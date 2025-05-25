@@ -1,9 +1,9 @@
-/* General Body and Font Styles */
+/* General Body and Font Styles - DARK THEME */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f4f7f6; /* Light background */
-  color: #333;
+  background-color: #1a1a2e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
   line-height: 1.6;
 }
 
@@ -13,52 +13,57 @@ body {
   padding: 15px;
 }
 
-/* Header Styles */
+/* Header Styles - DARK THEME */
 .header {
-  background-color: #fff;
+  background-color: #16213e; /* Slightly darker header */
   padding: 15px 20px;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #0f182a; /* Darker border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-top {
   display: flex;
-  /* Mengubah dari space-between menjadi flex-start atau center */
-  justify-content: flex-start; /* Mengatur item dari awal kontainer (kiri) */
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 15px;
-  gap: 20px; /* Menambahkan jarak antara logo dan search bar */
+  gap: 20px;
 }
 
 .search-form {
   display: flex;
   flex-grow: 1;
-  /* Menghapus margin-right yang sebelumnya */
   margin-right: 0;
   max-width: 500px;
 }
 
 .search-input {
-  border: 1px solid #ddd;
+  border: 1px solid #3e4e6b; /* Darker border for input */
+  background-color: #2e3b55; /* Darker input background */
+  color: #e0e0e0; /* Light text in input */
   padding: 10px 15px;
   border-radius: 25px;
   flex-grow: 1;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.search-input::placeholder {
+  color: #a0a0a0; /* Lighter placeholder text */
 }
 
 .search-input:focus {
-  border-color: #007bff; /* Highlight on focus */
+  border-color: #5d8aa8; /* Highlight on focus (light blue) */
+  background-color: #3e4e6b; /* Slightly lighter on focus */
 }
 
 .search-button {
-  background-color: #007bff;
+  background-color: #5d8aa8; /* Muted blue for button */
   color: white;
   border: none;
   border-radius: 25px;
   padding: 10px 15px;
-  margin-left: -40px; /* Overlap input for icon placement */
+  margin-left: -40px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -67,7 +72,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: #0056b3;
+  background-color: #4a728a; /* Darker blue on hover */
 }
 
 .search-button .fas {
@@ -75,7 +80,7 @@ body {
 }
 
 .logo {
-  flex-shrink: 0; /* Pastikan logo tidak mengecil */
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -101,9 +106,10 @@ body {
 }
 
 .main-nav {
-  background-color: #f8f9fa; /* Lighter background for nav */
+  background-color: #16213e; /* Darker background for nav */
   border-radius: 8px;
   padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
@@ -116,7 +122,7 @@ body {
 
 .nav-item {
   text-decoration: none;
-  color: #555;
+  color: #a0a0a0; /* Lighter grey for nav text */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,8 +132,8 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #e9ecef;
-  color: #007bff;
+  background-color: #2e3b55; /* Darker on hover */
+  color: #5d8aa8; /* Light blue on hover */
 }
 
 .nav-icon {
@@ -140,34 +146,35 @@ body {
   font-weight: 500;
 }
 
-/* Featured Carousel */
+/* Featured Carousel - DARK THEME */
 .featured-carousel {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Snap to slides */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   padding: 15px 0;
-  gap: 15px; /* Space between slides */
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 .carousel-slide {
-  flex: 0 0 90%; /* Take 90% of container width, adjust as needed */
-  max-width: 300px; /* Max width for a single slide */
-  background-color: #fff;
+  flex: 0 0 90%;
+  max-width: 300px;
+  background-color: #16213e; /* Darker slide background */
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   scroll-snap-align: start;
-  min-width: 280px; /* Ensure slides don't get too small */
+  min-width: 280px;
+  border: 1px solid #2e3b55; /* Subtle border */
 }
 
 .promo-badge {
   position: absolute;
   top: 15px;
   left: 15px;
-  background-color: #ff4500; /* Orange-red for hot/new */
+  background-color: #e65252; /* Softer red for hot/new */
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -176,31 +183,32 @@ body {
 }
 
 .carousel-slide:nth-child(even) .promo-badge {
-  background-color: #28a745; /* Green for new */
+  background-color: #5cb85c; /* Softer green for new */
 }
 
 .promo-text {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 25px; /* Space for badge */
-  color: #333;
+  margin-top: 25px;
+  color: #e0e0e0; /* Light text */
 }
 
 .promo-subtext {
   font-size: 0.9rem;
-  color: #666;
+  color: #a0a0a0; /* Lighter grey for subtext */
   margin-top: 5px;
 }
 
-/* Quick Actions */
+/* Quick Actions - DARK THEME */
 .quick-actions {
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
-  background-color: #fff;
+  background-color: #16213e; /* Darker background */
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  border: 1px solid #2e3b55;
 }
 
 .action-item {
@@ -212,29 +220,30 @@ body {
 }
 
 .action-item:hover {
-  background-color: #f0f0f0;
+  background-color: #2e3b55; /* Darker hover */
   border-radius: 8px;
 }
 
 .action-icon {
   font-size: 1.8rem;
-  color: #007bff;
+  color: #5d8aa8; /* Muted blue for icons */
   margin-bottom: 8px;
 }
 
 .action-text {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #333;
+  color: #e0e0e0; /* Light text */
 }
 
-/* Game Categories */
+/* Game Categories - DARK THEME */
 .game-categories {
   margin-bottom: 25px;
-  background-color: #fff;
+  background-color: #16213e; /* Darker background */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2e3b55;
 }
 
 .category-header {
@@ -247,13 +256,13 @@ body {
 .category-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: #e0e0e0; /* Light text */
   margin: 0;
 }
 
 .view-all {
   text-decoration: none;
-  color: #007bff;
+  color: #5d8aa8; /* Muted blue for links */
   font-weight: 500;
   font-size: 0.9rem;
 }
@@ -265,14 +274,14 @@ body {
 
 .game-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 15px;
 }
 
 .game-item {
   text-align: center;
   text-decoration: none;
-  color: #333;
+  color: #e0e0e0;
   transition: transform 0.2s;
 }
 
@@ -285,26 +294,27 @@ body {
   height: 70px;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #2e3b55; /* Darker border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .game-name {
   font-size: 0.85rem;
   margin-top: 8px;
   font-weight: 500;
-  white-space: nowrap; /* Prevent text wrapping */
-  overflow: hidden; /* Hide overflow text */
-  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Pulsa & Paket Data Section */
+/* Pulsa & Paket Data Section - DARK THEME */
 .pulsa-section {
   margin-bottom: 25px;
-  background-color: #fff;
+  background-color: #16213e; /* Darker background */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2e3b55;
 }
 
 .phone-input-container {
@@ -319,19 +329,22 @@ body {
 .phone-input {
   flex-grow: 1;
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #3e4e6b;
+  background-color: #2e3b55;
+  color: #e0e0e0;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
 .phone-input:focus {
-  border-color: #007bff;
+  border-color: #5d8aa8;
+  background-color: #3e4e6b;
 }
 
 .check-button {
-  background-color: #007bff;
+  background-color: #5d8aa8;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -344,7 +357,7 @@ body {
 }
 
 .check-button:hover {
-  background-color: #0056b3;
+  background-color: #4a728a;
 }
 
 .operator-logos {
@@ -354,14 +367,14 @@ body {
 }
 
 .operator-logos img {
-  height: 35px; /* Adjust size as needed */
+  height: 35px;
   object-fit: contain;
-  filter: grayscale(80%); /* Make them slightly muted */
+  filter: grayscale(50%) brightness(120%); /* Less grayscale, brighter for dark mode */
   transition: filter 0.3s;
 }
 
 .operator-logos img:hover {
-  filter: grayscale(0%); /* Full color on hover */
+  filter: grayscale(0%) brightness(100%); /* Full color on hover */
 }
 
 .package-grid {
@@ -371,12 +384,12 @@ body {
 }
 
 .package-card {
-  background-color: #f8f9fa;
-  border: 1px solid #eee;
+  background-color: #16213e; /* Darker card background */
+  border: 1px solid #2e3b55; /* Darker border */
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
@@ -385,7 +398,7 @@ body {
 
 .package-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .package-header {
@@ -400,25 +413,18 @@ body {
   font-weight: 600;
   padding: 4px 8px;
   border-radius: 5px;
-  color: white;
+  color: white; /* Keep white for readability on colored background */
 }
 
-.operator-label.telkomsel {
-  background-color: #e4002b;
-} /* Telkomsel red */
-.operator-label.xl {
-  background-color: #0c1c4f;
-} /* XL blue */
-.operator-label.indosat {
-  background-color: #ed1c24;
-} /* Indosat red */
-.operator-label.smartfren {
-  background-color: #ff8c00;
-} /* Smartfren orange */
+/* Operator colors remain distinct */
+.operator-label.telkomsel { background-color: #e4002b; }
+.operator-label.xl { background-color: #0c1c4f; }
+.operator-label.indosat { background-color: #ed1c24; }
+.operator-label.smartfren { background-color: #ff8c00; }
 
 .best-seller {
-  background-color: #ffc107; /* Yellow */
-  color: #333;
+  background-color: #d1b44b; /* Muted yellow */
+  color: #1a1a2e; /* Dark text for contrast */
   font-size: 0.7rem;
   font-weight: 700;
   padding: 3px 7px;
@@ -428,13 +434,13 @@ body {
 .package-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #007bff;
+  color: #5d8aa8; /* Muted blue */
   margin: 0;
 }
 
 .package-duration {
   font-size: 0.85rem;
-  color: #666;
+  color: #a0a0a0; /* Lighter grey */
   margin-top: 5px;
 }
 
@@ -444,7 +450,7 @@ body {
 
 .original-price {
   font-size: 0.8rem;
-  color: #999;
+  color: #707070; /* Darker grey */
   text-decoration: line-through;
   display: block;
 }
@@ -452,16 +458,17 @@ body {
 .discounted-price {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #dc3545; /* Red for discount */
+  color: #e65252; /* Softer red for discount */
 }
 
-/* Voucher Section */
+/* Voucher Section - DARK THEME */
 .voucher-section {
   margin-bottom: 25px;
-  background-color: #fff;
+  background-color: #16213e; /* Darker background */
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2e3b55;
 }
 
 .voucher-grid {
@@ -471,22 +478,22 @@ body {
 }
 
 .voucher-card {
-  border: 1px solid #eee;
+  border: 1px solid #2e3b55; /* Darker border */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, box-shadow 0.2s;
-  background-color: #fff;
+  background-color: #16213e; /* Darker card background */
 }
 
 .voucher-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 .voucher-header {
   position: relative;
-  height: 120px; /* Fixed height for image container */
+  height: 120px;
   overflow: hidden;
 }
 
@@ -500,7 +507,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #28a745; /* Green for discount */
+  background-color: #5cb85c; /* Softer green for discount */
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -517,12 +524,12 @@ body {
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 8px;
-  color: #333;
+  color: #e0e0e0; /* Light text */
 }
 
 .voucher-validity {
   font-size: 0.8rem;
-  color: #888;
+  color: #a0a0a0; /* Lighter grey */
   margin-bottom: 10px;
 }
 
@@ -530,16 +537,16 @@ body {
   margin-bottom: 15px;
 }
 
-/* Re-using existing price styles for consistency */
 .voucher-price .original-price {
   font-size: 0.9rem;
 }
 .voucher-price .discounted-price {
   font-size: 1.3rem;
+  color: #e65252; /* Softer red for discount */
 }
 
 .buy-button {
-  background-color: #007bff;
+  background-color: #5d8aa8;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -552,35 +559,35 @@ body {
 }
 
 .buy-button:hover {
-  background-color: #0056b3;
+  background-color: #4a728a;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header-top {
     flex-direction: column;
-    align-items: center; /* Pusat logo dan search form di mobile */
-    gap: 15px; /* Menyesuaikan jarak di mobile */
+    align-items: center;
+    gap: 15px;
   }
 
   .search-form {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 0; /* Hapus margin-bottom di mobile jika tidak diperlukan */
+    margin-bottom: 0;
   }
 
   .logo {
-    margin-bottom: 10px; /* Beri sedikit jarak di bawah logo di mobile */
+    margin-bottom: 10px;
   }
 
   .nav-list {
-    flex-wrap: wrap; /* Allow navigation items to wrap */
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .nav-item {
-    flex: 1 1 auto; /* Allow items to grow/shrink, with a basis */
-    min-width: 80px; /* Minimum width for each nav item */
+    flex: 1 1 auto;
+    min-width: 80px;
     padding: 10px 5px;
   }
 
@@ -589,7 +596,7 @@ body {
   }
 
   .carousel-slide {
-    flex: 0 0 95%; /* Adjust slide width for smaller screens */
+    flex: 0 0 95%;
   }
 
   .quick-actions {
@@ -597,14 +604,14 @@ body {
   }
 
   .action-item {
-    flex: 1 1 30%; /* Adjust action item width */
+    flex: 1 1 30%;
     margin: 5px;
   }
 
   .game-list,
   .package-grid,
   .voucher-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
   .game-icon img {
@@ -645,7 +652,7 @@ body {
   }
 
   .carousel-slide {
-    flex: 0 0 100%; /* Full width for carousel on very small screens */
+    flex: 0 0 100%;
   }
 
   .promo-text {
@@ -667,7 +674,7 @@ body {
   .game-list,
   .package-grid,
   .voucher-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Further adjust grid */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 
   .game-icon img {
